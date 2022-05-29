@@ -9,6 +9,7 @@ services:
     working_dir: /var/www/html
     ports:
       - "89:80"
+    command: composer install --ignore-platform-reqs
     volumes:
         - .:/var/www/html
         - ./docker/nginx_log:/var/log/nginx
